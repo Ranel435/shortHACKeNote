@@ -1,0 +1,123 @@
+/* Устанавливаем шрифт Roboto для всего текста */
+body {
+  background-color: black;  /* Черный фон страницы */
+  color: white;  /* Белый цвет текста */
+  font-family: 'Montserrat', sans-serif; /* Применение шрифта Roboto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  margin-top: 2.0rem;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  background-color: black;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px; /* Размер логотипа */
+  height: auto;
+  margin-right: 0px;
+}
+
+/* Контейнер формы */
+.form-container {
+  background-color: #333;  /* Серый фон для формы */
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;  /* Ширина по умолчанию */
+  max-width: 400px;  /* Максимальная ширина для крупных экранов */
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Стиль формы */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Заголовок формы */
+.form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* Стиль текстовых полей и паролей */
+.form input {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  font-size: 1rem;  /* Относительная единица для размера текста */
+}
+
+/* Стиль кнопки */
+.form button {
+  background-color: #555;  /* Темно-серый цвет кнопки */
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+/* При наведении изменяем цвет кнопки */
+.form button:hover {
+  background-color: #777;
+}
+
+/* Стиль меток (labels) */
+.form label {
+  margin-bottom: 5px;
+  font-size: 0.9rem;  /* Немного меньше стандартного текста */
+  font-weight: 400;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    height: auto;  /* Отключаем фиксированную высоту для мобильных */
+    padding: 20px;  /* Добавляем отступы по бокам */
+  }
+
+  .form-container {
+    width: 90%;  /* Увеличиваем ширину формы на мобильных */
+  }
+
+  .form h2 {
+    font-size: 1.5rem;  /* Увеличиваем заголовок на мобильных */
+  }
+}
+
+/* Адаптивность для очень маленьких экранов (до 480px) */
+@media (max-width: 480px) {
+  .form input, .form button {
+    flex-direction: column;
+    padding: 10px;  /* Уменьшаем поля для маленьких экранов */
+    font-size: 0.9rem;  /* Уменьшаем размер текста */
+  }
+
+  .form h2 {
+    font-size: 1.3rem;  /* Еще меньше заголовок */
+  }
+
+
+}
