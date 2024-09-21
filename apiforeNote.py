@@ -6,7 +6,10 @@ from typing import List, Dict
 from sqlalchemy import create_engine, Column, Integer, String, Text, Table, MetaData
 from sqlalchemy.orm import sessionmaker
 
-app = FastAPI()
+#uvicorn main:app --reload
+#to start the https(api) http://127.0.0.1:8000/
+
+app = FastAPI() #start api
 
 users: Dict[str, str] = {}
 log: List[str] = []
